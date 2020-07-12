@@ -100,11 +100,11 @@ export class SearchPageComponent implements OnInit {
     journey.displaylist = this.displayList;
     this.serviceobj.nextMessage(journey);
     this.displayList =[];
-    this.startDate=new NgbDate(2020, 10, 10)
-    this.returnstartDate=new NgbDate(2020, 10, 13);
-    this.origin="";
-    this.destination="";
-    this.passengers= 1;
+    // this.startDate=new NgbDate(2020, 10, 10)
+    // this.returnstartDate=new NgbDate(2020, 10, 13);
+    // this.origin="";
+    // this.destination="";
+    // this.passengers= 1;
 
   }
 

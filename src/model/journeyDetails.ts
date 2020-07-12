@@ -8,5 +8,4 @@ export class JourneyDetails {
     public type:string;
     public returnstartDate:string;
     public displaylist: FlightModelReturn[];
-  
-   }
+}
