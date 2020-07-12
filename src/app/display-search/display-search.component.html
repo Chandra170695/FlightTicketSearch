@@ -1,0 +1,49 @@
+<div class="container border">
+    <div class="row border">
+        <div class="col-md-8 space">
+            <h4> <span>{{journey.origin}} > </span>  <span>{{journey.destination}}</span> <span *ngIf = "journey.type != 'One Way'"> > {{journey.origin}}</span> </h4>
+        </div>
+        <div class="col-md-4">
+            <p> Depart: <span> {{journey.startDate}}</span> </p>
+            <p *ngIf ="journey.type != 'One Way'"> Return: <span>{{journey.returnstartDate}}</span> </p>
+        </div>
+    </div>
+    <br>
+    <div *ngIf =" journey.flightExists == true">
+        <div class="row border p-2 m-2" *ngFor="let row of journey.displaylist">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>Rs {{row.price}}</h5>
+                    </div>
+                   <div class="col-md-6">
+                        <p>{{row.flightNo}}</p>
+                        <p>{{row.startCode}}>{{row.endCode}}</p>
+                        <p>Depart: <span>{{row.departureTime}}</span></p>
+                        <p>Arrive: <span>{{row.arrivalTime}}</span></p>
+                    </div>
+                    <div class="col-md-6"  *ngIf = "journey.type != 'One Way'">
+                        <p>{{row.returnflightNo}}</p>
+                        <p>{{row.returnstartCode}}>{{row.returnendCode}}</p>
+                        <p>Depart: <span>{{row.returndepartureTime}}</span></p>
+                        <p>Arrive: <span>{{row.returnarrivalTime}}</span></p>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <img class="imgSize"src="assets/airIndia.jpg" >
+                </div>
+                <div class="row">
+                    <button class="btn btn-secondary">Book this flight</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="journey.flightExists == false">
+        <div class="col-md-12 jumbotron">
+           <p  class="text-danger text-center"> <em>No flights Found !</em> </p>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("../node_modules/bootstrap/dist/css/bootstrap.css");
+@import url("../node_modules/bootstrap/fa/css/all.css");
+
+body{
+    margin:0px;
+    padding:0px;
+    padding-top:20px;
+}
+
+.space{
+    padding-top:20px;
+}

@@ -1,0 +1,63 @@
+<div class="container  border p-2">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-secondary text-center ">Flight Search Engine</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                          <a class="nav-link " [ngClass]="{' active ':type == 'One Way'}" (click)="changeType('One Way')">One way</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link " [ngClass]="{' active ':type != 'One Way' }" (click)="changeType('Return')">Return</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <em *ngIf = "errorExists == true" class="text-danger">Please Enter all the details!</em>
+                    <em *ngIf = "sameCityErrorExists == true" class="text-danger">Origin and Destination cities should be different!</em>
+                    <em *ngIf = "dateError == true" class="text-danger">Return date shouldnt be, before start date!</em>
+                    <div class="row form-group">
+                        <select class="custom-select" [(ngModel)]="origin" placeholder="d.ff">
+                            <option value="" disabled selected hidden>Enter Origin City</option>
+                            <option *ngFor="let city of cityList" value="{{city}}">{{city}}</option>
+                        </select>
+                    </div>
+                    <div class="row form-group">
+                        <select class="custom-select" [(ngModel)]="destination">
+                            <option value="" disabled selected hidden>Enter Destination City</option>
+                            <option *ngFor="let city of cityList" value="{{city}}">{{city}}</option>
+                        </select>
+                    </div>
+                    <div class="row form-group">
+                        <em>Departure Date:</em>
+                        <input type="text" class="form-control" placeholder="Departure date" name="dp" [(ngModel)]="startDate" ngbDatepicker #d="ngbDatepicker"  (click)="d.toggle()">
+                    </div>  
+                    <div class="row form-group" *ngIf = "type == 'Return'">
+                        <em>Return Date:</em>
+                        <input type="text" class="form-control" placeholder="Return  date" name="dp2" [(ngModel)]="returnstartDate" ngbDatepicker #d2="ngbDatepicker"  (click)="d2.toggle()">
+                    </div>    
+                    <div class="row form-group">
+                        <p><em>Passengers: </em> <i class="fa fa-plus incDec" (click)="incrementDecrementPassengers('typeplus')"></i> {{passengers}} <i class="fa fa-minus incDec" (click)="incrementDecrementPassengers('typeminus')"></i></p>
+                    </div>
+                    <div>
+                        <h5 class="text-secondary">Refine flight search</h5>
+                        <span> 0 </span> <span class="float-right"> 10000 </span>
+                        <mv-slider [(value)]="amount" [min]="1" [max]="10000" [step]="50" [range] = true (change)="changeAmount()"></mv-slider> 
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <button class="btn btn-primary" (click)="beforeSearchValidation()">Search</button>
+                </div>
+            </div>
+        </div>  <!--3 ends here-->
+        <div class="col-md-9">
+            <app-display-search></app-display-search>
+        </div>
+    </div>
+</div>

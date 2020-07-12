@@ -1,0 +1,15 @@
+[
+    {"price":"5000","departureDate":"10/10/2020","departureTime":"10:00 AM","arrivalTime":"01.00 PM","startPoint":"Pune","startCode":"PNQ","endPoint":"Delhi","endCode":"DEL","flightNo":"AI-202","availableTickets":"5"},
+    {"price":"6000","departureDate":"10/10/2020","departureTime":"02:00 PM","arrivalTime":"05.00 PM","startPoint":"Delhi","startCode":"DEL","endPoint":"Pune","endCode":"PNQ","flightNo":"AI-203","availableTickets":"7"},
+    {"price":"7000","departureDate":"10/10/2020","departureTime":"12:00 AM","arrivalTime":"03.00 PM","startPoint":"Pune","startCode":"PNQ","endPoint":"Delhi","endCode":"DEL","flightNo":"AI-207","availableTickets":"15"},
+    {"price":"9000","departureDate":"10/10/2020","departureTime":"05:00 PM","arrivalTime":"08.00 PM","startPoint":"Delhi","startCode":"DEL","endPoint":"Pune","endCode":"PNQ","flightNo":"AI-211","availableTickets":"10"},
+    {"price":"4000","departureDate":"10/10/2020","departureTime":"10:00 AM","arrivalTime":"01.00 PM","startPoint":"Bengaluru","startCode":"BNG","endPoint":"Delhi","endCode":"DEL","flightNo":"AI-402","availableTickets":"2"},
+    {"price":"6000","departureDate":"10/10/2020","departureTime":"02:00 PM","arrivalTime":"05.00 PM","startPoint":"Delhi","startCode":"DEL","endPoint":"Bengaluru","endCode":"BNG","flightNo":"AI-703","availableTickets":"7"},
+    {"price":"7000","departureDate":"10/10/2020","departureTime":"12:00 AM","arrivalTime":"03.00 PM","startPoint":"Bengaluru","startCode":"BNG","endPoint":"Delhi","endCode":"DEL","flightNo":"AI-207","availableTickets":"15"},
+    {"price":"9000","departureDate":"10/10/2020","departureTime":"05:00 PM","arrivalTime":"08.00 PM","startPoint":"Delhi","startCode":"DEL","endPoint":"Bengaluru","endCode":"BNG","flightNo":"AI-211","availableTickets":"10"},
+    {"price":"4000","departureDate":"10/10/2020","departureTime":"10:00 AM","arrivalTime":"01.00 PM","startPoint":"Bengaluru","startCode":"BNG","endPoint":"Pune","endCode":"PNQ","flightNo":"AI-402","availableTickets":"2"},
+    {"price":"6000","departureDate":"10/10/2020","departureTime":"02:00 PM","arrivalTime":"05.00 PM","startPoint":"Pune","startCode":"PNQ","endPoint":"Bengaluru","endCode":"BNG","flightNo":"AI-703","availableTickets":"7"},
+    {"price":"7000","departureDate":"10/10/2020","departureTime":"12:00 AM","arrivalTime":"03.00 PM","startPoint":"Bengaluru","startCode":"BNG","endPoint":"Pune","endCode":"PNQ","flightNo":"AI-207","availableTickets":"15"},
+    {"price":"9000","departureDate":"10/10/2020","departureTime":"05:00 PM","arrivalTime":"08.00 PM","startPoint":"Pune","startCode":"PNQ","endPoint":"Bengaluru","endCode":"BNG","flightNo":"AI-211","availableTickets":"10"}
+
+]
